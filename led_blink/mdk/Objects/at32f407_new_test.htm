@@ -3,15 +3,19 @@
 <title>Static Call Graph - [.\Objects\at32f407_new_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\at32f407_new_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jul 12 15:13:48 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jul 12 17:05:52 2023
 <BR><P>
-<H3>Maximum Stack Usage =        152 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        120 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 main &rArr; uart_print_init &rArr; usart_init &rArr; crm_clocks_freq_get &rArr; __aeabi_uldivmod
 <P>
 <H3>
 Mutually Recursive functions
 </H3> <LI><a href="#[5e]">ACC_IRQHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[5e]">ACC_IRQHandler</a><BR>
+ <LI><a href="#[4]">BusFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[4]">BusFault_Handler</a><BR>
+ <LI><a href="#[2]">HardFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[2]">HardFault_Handler</a><BR>
+ <LI><a href="#[3]">MemManage_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3]">MemManage_Handler</a><BR>
+ <LI><a href="#[5]">UsageFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[5]">UsageFault_Handler</a><BR>
 </UL>
 <P>
 <H3>
@@ -486,16 +490,28 @@ Global Symbols
 
 <P><STRONG><a name="[a7]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, at32f435_437_int.o(i.BusFault_Handler))
+<P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, at32f435_437_int.o(i.BusFault_Handler))
+<BR><BR>[Calls]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_at32f435_437.o(RESET)
 </UL>
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, at32f435_437_int.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_at32f435_437.o(RESET)
 </UL>
-<P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, at32f435_437_int.o(i.HardFault_Handler))
+<P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, at32f435_437_int.o(i.HardFault_Handler))
+<BR><BR>[Calls]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_at32f435_437.o(RESET)
 </UL>
-<P><STRONG><a name="[3]"></a>MemManage_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, at32f435_437_int.o(i.MemManage_Handler))
+<P><STRONG><a name="[3]"></a>MemManage_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, at32f435_437_int.o(i.MemManage_Handler))
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemManage_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemManage_Handler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_at32f435_437.o(RESET)
 </UL>
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, at32f435_437_int.o(i.NMI_Handler))
@@ -510,10 +526,14 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, at32f435_437_int.o(i.SysTick_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_at32f435_437.o(RESET)
 </UL>
-<P><STRONG><a name="[6b]"></a>SystemInit</STRONG> (Thumb, 128 bytes, Stack size 0 bytes, system_at32f435_437.o(i.SystemInit))
+<P><STRONG><a name="[6b]"></a>SystemInit</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, system_at32f435_437.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_at32f435_437.o(.text)
 </UL>
-<P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, at32f435_437_int.o(i.UsageFault_Handler))
+<P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, at32f435_437_int.o(i.UsageFault_Handler))
+<BR><BR>[Calls]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_at32f435_437.o(RESET)
 </UL>
 <P><STRONG><a name="[74]"></a>__0printf$1</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printf1.o(i.__0printf$1), UNUSED)
@@ -536,16 +556,16 @@ Global Symbols
 
 <P><STRONG><a name="[ab]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[77]"></a>at32_board_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, at32f435_437_board.o(i.at32_board_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = at32_board_init &rArr; delay_init
+<P><STRONG><a name="[77]"></a>at32_board_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, at32f435_437_board.o(i.at32_board_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = at32_board_init &rArr; delay_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[79]"></a>at32_gpio_init</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, device_gpio.o(i.at32_gpio_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = at32_gpio_init &rArr; gpio_init
+<P><STRONG><a name="[79]"></a>at32_gpio_init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, device_gpio.o(i.at32_gpio_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = at32_gpio_init &rArr; gpio_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bits_write
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
@@ -555,28 +575,28 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_register
 </UL>
 
-<P><STRONG><a name="[94]"></a>crm_ahb_div_set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_ahb_div_set))
+<P><STRONG><a name="[94]"></a>crm_ahb_div_set</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_ahb_div_set))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[96]"></a>crm_apb1_div_set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_apb1_div_set))
+<P><STRONG><a name="[96]"></a>crm_apb1_div_set</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_apb1_div_set))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[95]"></a>crm_apb2_div_set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_apb2_div_set))
+<P><STRONG><a name="[95]"></a>crm_apb2_div_set</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_apb2_div_set))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[97]"></a>crm_auto_step_mode_enable</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_auto_step_mode_enable))
+<P><STRONG><a name="[97]"></a>crm_auto_step_mode_enable</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_auto_step_mode_enable))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[92]"></a>crm_clock_source_enable</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_clock_source_enable))
+<P><STRONG><a name="[92]"></a>crm_clock_source_enable</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_clock_source_enable))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[7e]"></a>crm_clocks_freq_get</STRONG> (Thumb, 242 bytes, Stack size 48 bytes, at32f435_437_crm.o(i.crm_clocks_freq_get))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = crm_clocks_freq_get &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[7e]"></a>crm_clocks_freq_get</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, at32f435_437_crm.o(i.crm_clocks_freq_get))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = crm_clocks_freq_get &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_sysclk_switch_status_get
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
@@ -584,22 +604,20 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 </UL>
 
-<P><STRONG><a name="[81]"></a>crm_flag_get</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, at32f435_437_crm.o(i.crm_flag_get))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = crm_flag_get
-</UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_hext_stable_wait
+<P><STRONG><a name="[81]"></a>crm_flag_get</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_flag_get))
+<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_hext_stable_wait
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[80]"></a>crm_hext_stable_wait</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, at32f435_437_crm.o(i.crm_hext_stable_wait))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = crm_hext_stable_wait &rArr; crm_flag_get
+<P><STRONG><a name="[80]"></a>crm_hext_stable_wait</STRONG> (Thumb, 40 bytes, Stack size 12 bytes, at32f435_437_crm.o(i.crm_hext_stable_wait))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crm_hext_stable_wait
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_flag_get
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[7a]"></a>crm_periph_clock_enable</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, at32f435_437_crm.o(i.crm_periph_clock_enable))
+<P><STRONG><a name="[7a]"></a>crm_periph_clock_enable</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, at32f435_437_crm.o(i.crm_periph_clock_enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = crm_periph_clock_enable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;at32_gpio_init
@@ -607,17 +625,17 @@ Global Symbols
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[93]"></a>crm_pll_config</STRONG> (Thumb, 68 bytes, Stack size 12 bytes, at32f435_437_crm.o(i.crm_pll_config))
+<P><STRONG><a name="[93]"></a>crm_pll_config</STRONG> (Thumb, 52 bytes, Stack size 12 bytes, at32f435_437_crm.o(i.crm_pll_config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = crm_pll_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[91]"></a>crm_reset</STRONG> (Thumb, 106 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_reset))
+<P><STRONG><a name="[91]"></a>crm_reset</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_reset))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[98]"></a>crm_sysclk_switch</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_sysclk_switch))
+<P><STRONG><a name="[98]"></a>crm_sysclk_switch</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, at32f435_437_crm.o(i.crm_sysclk_switch))
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
@@ -627,7 +645,7 @@ Global Symbols
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_clocks_freq_get
 </UL>
 
-<P><STRONG><a name="[78]"></a>delay_init</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, at32f435_437_board.o(i.delay_init))
+<P><STRONG><a name="[78]"></a>delay_init</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, at32f435_437_board.o(i.delay_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_clock_source_config
@@ -635,12 +653,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;at32_board_init
 </UL>
 
-<P><STRONG><a name="[87]"></a>delay_ms</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, at32f435_437_board.o(i.delay_ms))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_read
+<P><STRONG><a name="[87]"></a>delay_ms</STRONG> (Thumb, 72 bytes, Stack size 12 bytes, at32f435_437_board.o(i.delay_ms))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = delay_ms
+</UL>
+<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_read
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led0_blink
 </UL>
 
-<P><STRONG><a name="[6d]"></a>fputc</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, at32f435_437_board.o(i.fputc))
+<P><STRONG><a name="[6d]"></a>fputc</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, at32f435_437_board.o(i.fputc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fputc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_flag_get
@@ -658,29 +678,29 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_print_init
 </UL>
 
-<P><STRONG><a name="[7c]"></a>gpio_init</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, at32f435_437_gpio.o(i.gpio_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = gpio_init
+<P><STRONG><a name="[7c]"></a>gpio_init</STRONG> (Thumb, 100 bytes, Stack size 20 bytes, at32f435_437_gpio.o(i.gpio_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpio_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;at32_gpio_init
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_print_init
 </UL>
 
-<P><STRONG><a name="[86]"></a>gpio_input_data_bit_read</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, at32f435_437_gpio.o(i.gpio_input_data_bit_read))
+<P><STRONG><a name="[86]"></a>gpio_input_data_bit_read</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, at32f435_437_gpio.o(i.gpio_input_data_bit_read))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_read
 </UL>
 
-<P><STRONG><a name="[8a]"></a>gpio_output_data_bit_read</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, at32f435_437_gpio.o(i.gpio_output_data_bit_read))
+<P><STRONG><a name="[8a]"></a>gpio_output_data_bit_read</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, at32f435_437_gpio.o(i.gpio_output_data_bit_read))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_write
 </UL>
 
-<P><STRONG><a name="[9a]"></a>gpio_pin_mux_config</STRONG> (Thumb, 66 bytes, Stack size 20 bytes, at32f435_437_gpio.o(i.gpio_pin_mux_config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpio_pin_mux_config
+<P><STRONG><a name="[9a]"></a>gpio_pin_mux_config</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, at32f435_437_gpio.o(i.gpio_pin_mux_config))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gpio_pin_mux_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_print_init
 </UL>
 
 <P><STRONG><a name="[85]"></a>gpio_read</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, device_gpio.o(i.gpio_read))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gpio_read
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpio_read &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_input_data_bit_read
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
@@ -688,16 +708,16 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key0_read
 </UL>
 
-<P><STRONG><a name="[88]"></a>gpio_register</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, bsp_led.o(i.gpio_register))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = gpio_register &rArr; at32_gpio_init &rArr; gpio_init
+<P><STRONG><a name="[88]"></a>gpio_register</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, bsp_led.o(i.gpio_register))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = gpio_register &rArr; at32_gpio_init &rArr; gpio_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;at32_gpio_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[89]"></a>gpio_write</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, device_gpio.o(i.gpio_write))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = gpio_write
+<P><STRONG><a name="[89]"></a>gpio_write</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, device_gpio.o(i.gpio_write))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = gpio_write
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_output_data_bit_read
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bits_write
@@ -705,7 +725,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led0_blink
 </UL>
 
-<P><STRONG><a name="[8b]"></a>key0_read</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, bsp_led.o(i.key0_read))
+<P><STRONG><a name="[8b]"></a>key0_read</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, bsp_led.o(i.key0_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = key0_read &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_read
@@ -714,8 +734,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8d]"></a>led0_blink</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, bsp_led.o(i.led0_blink))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = led0_blink &rArr; gpio_write
+<P><STRONG><a name="[8d]"></a>led0_blink</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, bsp_led.o(i.led0_blink))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = led0_blink &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_write
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
@@ -723,7 +743,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8e]"></a>led_int</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, bsp_led.o(i.led_int))
+<P><STRONG><a name="[8e]"></a>led_int</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, bsp_led.o(i.led_int))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = led_int &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -732,7 +752,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[6a]"></a>main</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = main &rArr; uart_print_init &rArr; usart_init &rArr; crm_clocks_freq_get &rArr; __aeabi_uldivmod
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = main &rArr; uart_print_init &rArr; usart_init &rArr; crm_clocks_freq_get &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_print_init
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_int
@@ -745,8 +765,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[8f]"></a>system_clock_config</STRONG> (Thumb, 144 bytes, Stack size 8 bytes, at32f435_437_clock.o(i.system_clock_config))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = system_clock_config &rArr; system_core_clock_update &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[8f]"></a>system_clock_config</STRONG> (Thumb, 138 bytes, Stack size 8 bytes, at32f435_437_clock.o(i.system_clock_config))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = system_clock_config &rArr; system_core_clock_update &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_core_clock_update
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_sysclk_switch_status_get
@@ -765,8 +785,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[99]"></a>system_core_clock_update</STRONG> (Thumb, 214 bytes, Stack size 48 bytes, system_at32f435_437.o(i.system_core_clock_update))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = system_core_clock_update &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[99]"></a>system_core_clock_update</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, system_at32f435_437.o(i.system_core_clock_update))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = system_core_clock_update &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_sysclk_switch_status_get
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
@@ -774,12 +794,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[82]"></a>systick_clock_source_config</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, at32f435_437_misc.o(i.systick_clock_source_config))
+<P><STRONG><a name="[82]"></a>systick_clock_source_config</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, at32f435_437_misc.o(i.systick_clock_source_config))
 <BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
 </UL>
 
-<P><STRONG><a name="[90]"></a>uart_print_init</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, at32f435_437_board.o(i.uart_print_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = uart_print_init &rArr; usart_init &rArr; crm_clocks_freq_get &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[90]"></a>uart_print_init</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, at32f435_437_board.o(i.uart_print_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = uart_print_init &rArr; usart_init &rArr; crm_clocks_freq_get &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_transmitter_enable
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
@@ -800,12 +820,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_print_init
 </UL>
 
-<P><STRONG><a name="[83]"></a>usart_flag_get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, at32f435_437_usart.o(i.usart_flag_get))
+<P><STRONG><a name="[83]"></a>usart_flag_get</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, at32f435_437_usart.o(i.usart_flag_get))
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[9b]"></a>usart_init</STRONG> (Thumb, 162 bytes, Stack size 48 bytes, at32f435_437_usart.o(i.usart_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = usart_init &rArr; crm_clocks_freq_get &rArr; __aeabi_uldivmod
+<P><STRONG><a name="[9b]"></a>usart_init</STRONG> (Thumb, 124 bytes, Stack size 40 bytes, at32f435_437_usart.o(i.usart_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = usart_init &rArr; crm_clocks_freq_get &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crm_clocks_freq_get
 </UL>

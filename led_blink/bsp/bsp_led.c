@@ -43,8 +43,8 @@ void led0_blink(void)
 
 void key0_read(void)
 {
-	uint8_t state;
-	state = gpio_read(led_manage.gpio_list[0]);
+	static uint8_t state;
+	state = gpio_read(key_manage.gpio_list[0]);
 	printf("key0 state = %d\n",state);
 
 }
